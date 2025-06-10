@@ -22,12 +22,3 @@ def createCard():
             for value in values:
                 card = Cards(house, value)
                
-
-
-# def displayCards():
-#       if Cards.cards:
-#         for card in Cards.cards:
-#             print(card)
-
-# createCard()
-# displayCards()

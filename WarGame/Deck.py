@@ -1,8 +1,9 @@
 import Cards as Cards
 import random
+import collections
 Cards.createCard()
 class Deck():
-    deck = []
+    deck = collections.deque([])
     def __init__(self):
         pass
     def createDeck():
@@ -14,8 +15,3 @@ class Deck():
 
 def shuffleDeck():
     random.shuffle(Deck.deck)
-    # print(deck)
-
-# deck = Deck()
-# deck.createDeck()
-# print(deck)

@@ -1,10 +1,10 @@
 import Deck as deck
-
+import collections
 class Player():
     deck = deck.Deck.createDeck()
     def __init__(self, name, points, playerDeck):
         self.name = name
-        self.playerDeck = playerDeck
+        self.playerDeck = collections.deque(playerDeck)
         self.points = points
 
     def __str__(self):
@@ -14,9 +14,9 @@ def CreatePlayer():
         name = input("Choose your Name: ")
         points = 0
         mid = len(deck.Deck.deck) // 2
-        playerDeck = deck.Deck.deck[:mid]
+        playerDeck = list(deck.Deck.deck)[:mid]
         player1 = Player(name, points, playerDeck)
-        player2 = Player("CPU", 0, deck.Deck.deck[mid:])
+        player2 = Player("CPU", 0, list(deck.Deck.deck)[mid:])
         return player1, player2
 def printPlayerInfo():
     if Player.player:
@@ -24,7 +24,4 @@ def printPlayerInfo():
              print(player)
     else:
          print("No Player")
-
-# CreatePlayer()
-# printPlayerInfo()
 
