@@ -18,6 +18,7 @@ def CreatePlayer():
         player1 = Player(name, points, playerDeck)
         player2 = Player("CPU", 0, list(deck.Deck.deck)[mid:])
         return player1, player2
+
 def printPlayerInfo():
     if Player.player:
         for player in Player.player:
