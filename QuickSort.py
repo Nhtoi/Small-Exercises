@@ -1,5 +1,3 @@
-
-
 def QuickSort(arr):
     qs(arr, 0, len(arr) - 1)
 
